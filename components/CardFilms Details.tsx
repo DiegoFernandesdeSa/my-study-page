@@ -43,6 +43,8 @@ export const CardFilmsDetails = ({
 
   useEffect(() => {}, []);
 
+  console.log(videos);
+
   return (
     <div className="flex flex-col w-full justify-center">
       <div className="flex w-full">
@@ -145,9 +147,9 @@ export const CardFilmsDetails = ({
                 id="player"
                 width="640"
                 height="360"
-                src={`http://www.youtube.com/embed/${video.key}`}
+                src={`https://www.youtube.com/embed/${video.key}`}
                 className="rounded-lg"
-              ></iframe>
+              />
             </div>
           ))}
       </div>
