@@ -1,0 +1,4 @@
+import { FiBriefcase } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
+const skills = ["React", "TypeScript", "APIs REST", "Integrações", "Node.js", "Liderança"];
+export function AboutPage() { const { t } = useTranslation(); return <section className="page about"><header className="page-heading"><p className="eyebrow">{t("about.eyebrow")}</p><h1>{t("about.titleStart")} <em>{t("about.titleEmphasis")}</em></h1><p>{t("about.intro")}</p></header><div className="about-grid"><article className="story card"><span className="card-icon"><FiBriefcase /></span><h2>{t("about.storyTitle")}</h2><p>{t("about.story1")}</p><p>{t("about.story2")}</p></article><aside><div className="card values"><p className="eyebrow">{t("about.valuesLabel")}</p><h2>{t("about.valuesTitle")}</h2><p>{t("about.valuesText")}</p></div><div className="skill-list">{skills.map(skill => <span key={skill}>{skill}</span>)}</div></aside></div></section>; }
